@@ -8,7 +8,7 @@ h1, h2, h3, h4, h5 {
 
 :root{--bg:#ffffff;--text:#0b1724;--muted:#6b7280;--accent:#0b1320;--whatsapp:#25D366}
 *{box-sizing:border-box}
-html,body{height:100%;margin:0;font-family:Impact, 'Arial Black', 'Helvetica Neue', Arial, sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+html,body{height:100%;margin:0;font-family:Inter, 'Arial Black', 'Helvetica Neue', Arial, sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
 .container{max-width:1100px;margin:0 auto;padding:24px}
 
 /* Header */
