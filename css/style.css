@@ -1,3 +1,44 @@
+/* Hamburger button */
+.hamburger {
+  display: none; /* hidden on desktop */
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: var(--text);
+}
+
+/* Mobile nav hidden by default */
+.nav {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+/* Mobile responsive */
+@media(max-width:600px){
+  .hamburger {
+    display: block; /* show hamburger */
+  }
+  .nav {
+    display: none; /* hide nav initially */
+    flex-direction: column;
+    gap: 12px;
+    position: absolute;
+    top: 70px; /* below header */
+    right: 16px;
+    background: var(--bg);
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    z-index: 1000;
+  }
+  .nav.active {
+    display: flex; /* show nav when hamburger clicked */
+  }
+}
+
 /* Fonts */
 body {
   font-family: 'Inter', sans-serif;
