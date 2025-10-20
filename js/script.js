@@ -1,10 +1,12 @@
-document.addEventListener('DOMContentLoaded', function(){
+document.addEventListener('DOMContentLoaded', function() {
+  // Lightbox functionality
   const lb = document.getElementById('lightbox');
   const lbImg = document.getElementById('lbImage');
   const lbCap = document.getElementById('lbCaption');
   const lbClose = document.getElementById('lbClose');
-  document.querySelectorAll('.gallery .card').forEach(card=>{
-    card.addEventListener('click', ()=>{
+
+  document.querySelectorAll('.gallery .card').forEach(card => {
+    card.addEventListener('click', () => {
       const img = card.querySelector('img');
       lbImg.src = img.src;
       lbImg.alt = img.alt || '';
@@ -12,7 +14,16 @@ document.addEventListener('DOMContentLoaded', function(){
       lb.classList.add('open');
     });
   });
-  lbClose.addEventListener('click', ()=>lb.classList.remove('open'));
-  lb.addEventListener('click', (e)=>{ if(e.target===lb) lb.classList.remove('open'); });
-  document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') lb.classList.remove('open'); });
+
+  lbClose.addEventListener('click', () => lb.classList.remove('open'));
+  lb.addEventListener('click', (e) => { if(e.target === lb) lb.classList.remove('open'); });
+  document.addEventListener('keydown', (e) => { if(e.key === 'Escape') lb.classList.remove('open'); });
+
+  // Hamburger menu functionality
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('navMenu');
+
+  hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
 });
