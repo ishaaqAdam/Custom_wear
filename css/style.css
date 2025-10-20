@@ -1,3 +1,11 @@
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Montserrat', sans-serif;
+}
+
 :root{--bg:#ffffff;--text:#0b1724;--muted:#6b7280;--accent:#0b1320;--whatsapp:#25D366}
 *{box-sizing:border-box}
 html,body{height:100%;margin:0;font-family:Impact, 'Arial Black', 'Helvetica Neue', Arial, sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
