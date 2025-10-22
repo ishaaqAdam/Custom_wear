@@ -19,11 +19,14 @@ document.addEventListener('DOMContentLoaded', function() {
   lb.addEventListener('click', (e) => { if(e.target === lb) lb.classList.remove('open'); });
   document.addEventListener('keydown', (e) => { if(e.key === 'Escape') lb.classList.remove('open'); });
 
-  // Hamburger menu functionality
-  const hamburger = document.getElementById('hamburger');
-  const navMenu = document.getElementById('navMenu');
+/* HAMBURGER MENU (works on all pages) */
+  const burger = document.getElementById('burger');
+  const mobileNav = document.getElementById('mobileNav');
 
-  hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-  });
+  if(burger && mobileNav){
+    burger.addEventListener('click', ()=> {
+      mobileNav.classList.toggle('open');
+    });
+  }
+
 });
