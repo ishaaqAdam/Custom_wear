@@ -266,3 +266,21 @@ html, body {
   .hero-box p{font-size:0.95rem}
   .container{padding:16px}
 }
+/* Mobile header fixes */
+@media (max-width: 600px) {
+  .site-title {
+    font-size: 1.6rem;          /* smaller title */
+    text-align: center;         /* center the text */
+    width: 100%;                /* allows center alignment */
+    margin-top: 6px;
+  }
+
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .logo img {
+    height: 38px;              /* optional: slightly smaller logo */
+  }
+}
