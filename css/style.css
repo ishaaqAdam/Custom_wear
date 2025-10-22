@@ -92,7 +92,7 @@ html, body {
   gap: 12px;
 }
 .logo img {
-  height: 50px;
+  height: 80px;
   object-fit: contain;
 }
 .site-title {
