@@ -1,10 +1,17 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Lightbox functionality
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('navMenu');
   const lb = document.getElementById('lightbox');
   const lbImg = document.getElementById('lbImage');
   const lbCap = document.getElementById('lbCaption');
   const lbClose = document.getElementById('lbClose');
 
+  // Hamburger toggle
+  hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('open');
+  });
+
+  // Lightbox
   document.querySelectorAll('.gallery .card').forEach(card => {
     card.addEventListener('click', () => {
       const img = card.querySelector('img');
@@ -14,19 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
       lb.classList.add('open');
     });
   });
-
   lbClose.addEventListener('click', () => lb.classList.remove('open'));
-  lb.addEventListener('click', (e) => { if(e.target === lb) lb.classList.remove('open'); });
-  document.addEventListener('keydown', (e) => { if(e.key === 'Escape') lb.classList.remove('open'); });
-
-/* HAMBURGER MENU (works on all pages) */
-  const burger = document.getElementById('burger');
-  const mobileNav = document.getElementById('mobileNav');
-
-  if(burger && mobileNav){
-    burger.addEventListener('click', ()=> {
-      mobileNav.classList.toggle('open');
-    });
-  }
-
+  lb.addEventListener('click', e => { if (e.target === lb) lb.classList.remove('open'); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') lb.classList.remove('open'); });
 });
